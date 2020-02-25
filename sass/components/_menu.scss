@@ -1,0 +1,68 @@
+.menu {
+    line-height: 5rem;
+    text-align: center;
+    padding: 1rem 0;
+
+    ul {
+        li {
+            display: inline-block;
+
+            &.active::after, &:hover::after {
+                width: 100%;
+            }            
+
+            &.active a::after {
+                width: 100%;
+            }
+
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #777;
+                font-size: 2rem;                
+                padding: 0 2rem;            
+                position: relative;                
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    transition: all .2s;
+                    width: 0;
+                    background-color: #777;
+                }                
+
+                &:focus::after, &:hover::after {
+                    width: 100%;                    
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    &-main {
+        position: fixed;
+        display: block;
+        background: rgba(black, 0.5);
+        width: 100%;
+        z-index: 1;
+
+        ul {
+            li {
+                a {
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    &::after {
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}

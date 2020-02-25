@@ -1,0 +1,31 @@
+.w-100 {
+    width: 100%;
+}
+
+.mt {
+    &-small {
+        margin-top: 2.5rem;
+    }    
+    &-medium {
+        margin-top: 5rem;
+    }    
+}
+
+.mb {
+    &-small {
+        margin-bottom: 2.5rem !important;
+    }
+    &-smaller {
+        margin-bottom: 1rem;
+    }
+    &-medium {
+        margin-bottom: 5rem;
+    } 
+    &-none {
+        margin-bottom: 0 !important;
+    }
+}
+
+.text-center {
+    text-align: center;
+}

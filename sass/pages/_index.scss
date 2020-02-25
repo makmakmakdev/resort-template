@@ -1,0 +1,189 @@
+.section {
+    height: 100vh;
+    padding-top: $default-section-padding-top;
+    position: relative;
+
+    &-about-us {
+        .about-us-content {
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: calc(0rem - (#{$default-section-padding-top} + #{$default-header-secondary-margin-bottom}));
+        }
+    }    
+
+    &-rates {
+        .rates-content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(calc(-50% + (#{$default-header-secondary-margin-bottom})));
+        }
+
+        .swimming-entrance,
+        .table-rate {
+            &-box {
+                text-align: center;
+            }
+
+            &__img {
+                height: 15rem;
+            }
+
+            &__price {
+                display: block;
+                font-size: 5rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: .25rem;
+            }
+
+            &__currency {
+                font-size: 3rem;
+                font-weight: bold;
+                text-transform: none;
+                letter-spacing: normal;
+            }
+
+            &__category {
+                display: block;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+        
+        .table-rate {
+            &__description {
+                font-size: 2rem;
+                font-style: italic;
+            }
+        }
+    }
+
+    &-pools {
+        .pools-content {
+            display: flex;            
+            flex-direction: row;
+            align-items: center;
+            height: 100%;
+            margin-top: calc(0rem - (#{$default-section-padding-top} + #{$default-header-secondary-margin-bottom}));
+
+            &-wrapper {
+                width: 100%;     
+                background-color: rgba(#000, .1);            
+            }
+
+            .pool-image {
+                float: left;
+                width: calc((100%/3));
+                height: 48rem;
+                background-size: cover;                
+                transition: all .2s;
+
+                &:hover {
+                    transform: scale(1.15);
+                    box-shadow: 0 1rem 1rem rgba(#000, .5);
+                    z-index: 1;
+                }
+
+                &:first-child:hover {
+                    transform: translateX(10rem) scale(1.15);
+                }
+
+                &:last-child:hover {
+                    transform: translateX(-10rem) scale(1.15);
+                }
+
+                &-1 {
+                    background-image: url(../img/pool-1.jpg);
+                }
+
+                &-2 {
+                    background-image: url(../img/pool-2.jpg);
+                }
+
+                &-3 {
+                    background-image: url(../img/pool-3.jpg);
+                }
+            }
+        }
+    }
+
+    &-rooms {
+        .rooms-content {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .room-rate {
+            border: solid 2px #777;
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin-right: 2rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &--primary {
+                color: #00A8FF;
+                border-color: #00A8FF;
+            }
+
+            &__amount {
+                display: block;
+                font-size: 3rem;
+                font-weight: bold;
+            }
+
+            &__description1 {
+                display: block;
+                font-size: 1.5rem;
+            }
+
+            &__description2 {
+                display: block;
+                font-size: 1.5rem;
+                font-style: italic;
+            }
+
+            &__inclusions {
+                ul {
+                    li {
+                        list-style: none;
+                        font-size: 1.5rem;
+                        margin-bottom: .75rem;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            &__limits {
+                ul {
+                    li {
+                        font-size: 1.25rem;
+                        font-style: italic;
+                        margin-left: 1.75rem;
+                        margin-bottom: .15rem;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &-contact-us {        
+        background: linear-gradient(to right, rgba(#000, .5), rgba(#000, .5)), url(../img/map.png);
+        background-position: top;
+        background-size: cover;
+    }
+}

@@ -6,9 +6,22 @@
 }
 
 .img-about {
+    width: 100%;
     background-image: url(../img/about.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
+
+    @include respond(desktop) {
+        height: 36rem;
+    }
+
+    @include respond(tab-port) {
+        margin-top: 2rem;
+    }
+
+    @include respond(phone) {
+        height: 30rem;
+    }
 }
 
 .img-room {
@@ -16,5 +29,10 @@
     height: 36rem;
     background-image: url(../img/about.jpg);
     background-size: cover;
-    background-position: top;
+    background-position: center;
+
+    @include respond(tab-port) {
+        margin-bottom: 2rem;
+        height: 30rem;
+    }    
 }

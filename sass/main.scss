@@ -9,9 +9,15 @@
 @import "components/button";
 @import "components/image";
 
-
+@import "layout/navigation";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/grid";
 
 @import "pages/index";
+@import "pages/index/home";
+@import "pages/index/about-us";
+@import "pages/index/rates";
+@import "pages/index/pools";
+@import "pages/index/rooms";
+@import "pages/index/contact-us";

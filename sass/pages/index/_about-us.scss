@@ -1,0 +1,13 @@
+.about-us-content {
+    @include centerVertical;
+
+    transform: translateY(-45%);
+
+    @include respond(tab-port) {
+        padding: 0 3rem;
+    }
+
+    @include respond(phone){
+        transform: translateY(-50%);
+    }
+}

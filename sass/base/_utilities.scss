@@ -1,5 +1,27 @@
+.w-33 {
+    &-phone {
+        @include respond(phone) {
+            width: calc(33% - 4rem) !important;
+        }
+    }
+}
+
+.w-50{
+    &-tab-port {
+        @include respond(tab-port) {
+            width: calc(50% - 3rem) !important;
+        }
+    }
+}
+
 .w-100 {
     width: 100%;
+
+    &-phone {
+        @include respond(phone) {
+            width: 100% !important;
+        }
+    }
 }
 
 .mt {

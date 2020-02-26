@@ -1,0 +1,92 @@
+.pools-content {
+    @include centerVertical;
+
+    @include respond(phone) {
+        margin-top: 5rem;
+    }
+
+    &-wrapper {
+        position: relative;
+        width: 100%;
+        background-color: rgba(#000, .1);
+
+        @include clearfix;
+        
+        @include respond(phone) {
+            background: none;
+            &:hover .pool-image:not(:hover){
+                opacity: .5;
+            }
+        }
+    }    
+
+    .pool-image {
+        float: left;
+        width: calc((100%/3));
+        height: 48rem;
+        background-size: cover;
+        background-position: center;
+        transition: all .2s;
+
+        @include respond(desktop) {
+            height: 35rem;
+        }
+
+        @include respond(phone) {
+            margin: 0 2.5rem;
+            display: block;
+            width: calc(100% - (2.5rem)*2);
+            height: 28rem;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    
+        &:hover {
+            transform: scale(1.15);
+            box-shadow: 0 1rem 1rem rgba(#000, .5);
+            z-index: 1;
+
+            @include respond(phone) {
+                transform: scale(1);
+            }
+        }
+    
+        &:first-child:hover {
+            transform: translateX(10rem) scale(1.15);
+
+            @include respond(desktop) {
+                transform: translateX(5rem) scale(1.15);
+            }
+
+            @include respond(phone) {
+                transform: scale(1);
+            }
+        }
+    
+        &:last-child:hover {
+            transform: translateX(-10rem) scale(1.15);
+
+            @include respond(desktop) {
+                transform: translateX(-5rem) scale(1.15);
+            }
+
+            @include respond(phone) {
+                transform: scale(1);
+            }
+        }
+    
+        &-1 {
+            background-image: url(../img/pool-1.jpg);
+        }
+    
+        &-2 {
+            background-image: url(../img/pool-2.jpg);
+        }
+    
+        &-3 {
+            background-image: url(../img/pool-3.jpg);            
+        }
+    }
+}

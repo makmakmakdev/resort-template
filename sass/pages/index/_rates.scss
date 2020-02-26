@@ -1,0 +1,72 @@
+.rates-content {
+    @include centerVertical;
+    transform: translateY(calc(-50% + 5rem));
+
+    @include respond(tab-port) {
+        padding: 0 3rem;
+    }
+
+    @include respond(phone) {
+        // overflow-y: scroll;
+        // height: 100vh;        
+    }
+}
+
+.swimming-entrance,
+.table-rate {
+    &-box {
+        text-align: center;
+    }
+
+    &__img {
+        height: 15rem;
+
+        @include respond(desktop) {
+            height: 10rem;
+        }
+    }
+
+    &__price {
+        display: block;
+        font-size: 5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: .25rem;
+
+        @include respond(desktop) {
+            font-size: 3rem;
+        }
+    }
+
+    &__currency {
+        font-size: 3rem;
+        font-weight: bold;
+        text-transform: none;
+        letter-spacing: normal;
+
+        @include respond(desktop) {
+            font-size: 2.25rem;
+        }
+    }
+
+    &__category {
+        display: block;
+        font-size: 2rem;
+        font-weight: bold;
+
+        @include respond(desktop) {
+            font-size: 1.75rem;
+        }
+    }
+}
+
+.table-rate {
+    &__description {
+        font-size: 2rem;
+        font-style: italic;
+
+        @include respond(desktop) {
+            font-size: 1.75rem;
+        }
+    }
+}

@@ -1,0 +1,82 @@
+.rooms-content {
+    @include centerVertical;
+
+    @include respond(tab-port) {
+        padding: 0 3rem;
+    }
+}
+
+.room-rate-row {
+    @include clearfix;    
+}
+
+.room-rate {
+    border: solid 2px #777;
+    float: left;
+    padding: 1rem 0rem;
+    margin-right: 1rem;
+    width: calc(50% - .5rem);
+    text-align: center;
+    
+    &-wrapper {
+        display: inline-block;
+    }
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--primary {
+        color: #00A8FF;
+        border-color: #00A8FF;
+    }
+
+    &__amount {
+        display: block;
+        font-size: 3rem;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    &__description1 {
+        display: block;
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    &__description2 {
+        display: block;
+        font-size: 1.5rem;
+        font-style: italic;
+        text-align: left;
+    }
+
+    &__inclusions {
+        ul {
+            li {
+                list-style: none;
+                font-size: 1.5rem;
+                margin-bottom: .75rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &__limits {
+        ul {
+            li {
+                font-size: 1.25rem;
+                font-style: italic;
+                margin-left: 1.75rem;
+                margin-bottom: .15rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}

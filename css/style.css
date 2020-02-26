@@ -9,6 +9,18 @@ html {
   font-size: 62.5%;
   overflow: hidden;
   scroll-behavior: smooth; }
+  @media (max-width: 85.375em) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 45%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 45%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 45%; } }
 
 body {
   box-sizing: border-box;
@@ -26,6 +38,11 @@ body {
   position: relative;
   display: inline-block;
   padding: 1.5rem 5rem; }
+  @media (max-width: 56.25em) {
+    .header-primary {
+      padding: 1.5rem 3rem;
+      letter-spacing: .5rem;
+      font-size: 6rem; } }
   .header-primary::after {
     bottom: 0;
     left: 0;
@@ -36,12 +53,15 @@ body {
     background-color: #fff; }
 
 .header-secondary {
-  margin-top: 1rem;
+  margin-top: 2rem;
   margin-bottom: 5rem;
   font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
   text-align: center; }
+  @media (max-width: 37.5em) {
+    .header-secondary {
+      margin-bottom: 2rem; } }
 
 .header-tertiary {
   display: table;
@@ -59,14 +79,29 @@ body {
   font-size: 5rem;
   display: block;
   color: #fff; }
+  @media (max-width: 56.25em) {
+    .header-sub-heading {
+      letter-spacing: .5rem;
+      font-size: 4rem; } }
 
 .paragraph {
   font-size: 2rem;
   line-height: 3rem;
   text-align: justify; }
 
+@media (max-width: 37.5em) {
+  .w-33-phone {
+    width: calc(33% - 4rem) !important; } }
+
+@media (max-width: 56.25em) {
+  .w-50-tab-port {
+    width: calc(50% - 3rem) !important; } }
+
 .w-100 {
   width: 100%; }
+  @media (max-width: 37.5em) {
+    .w-100-phone {
+      width: 100% !important; } }
 
 .mt-small {
   margin-top: 2.5rem; }
@@ -125,6 +160,9 @@ body {
     background: rgba(0, 0, 0, 0.5);
     width: 100%;
     z-index: 1; }
+    @media (max-width: 37.5em) {
+      .menu-main {
+        background: none; } }
     .menu-main ul li a {
       text-transform: uppercase;
       color: #fff; }
@@ -162,16 +200,112 @@ body {
   height: 48rem; }
 
 .img-about {
+  width: 100%;
   background-image: url(../img/about.jpg);
   background-size: cover;
-  background-position: top; }
+  background-position: center; }
+  @media (max-width: 85.375em) {
+    .img-about {
+      height: 36rem; } }
+  @media (max-width: 56.25em) {
+    .img-about {
+      margin-top: 2rem; } }
+  @media (max-width: 37.5em) {
+    .img-about {
+      height: 30rem; } }
 
 .img-room {
   width: 100%;
   height: 36rem;
   background-image: url(../img/about.jpg);
   background-size: cover;
-  background-position: top; }
+  background-position: center; }
+  @media (max-width: 56.25em) {
+    .img-room {
+      margin-bottom: 2rem;
+      height: 30rem; } }
+
+.navigation__checkbox {
+  display: none; }
+
+@media (max-width: 37.5em) {
+  .navigation__button {
+    background-color: #fff;
+    height: 6.5rem;
+    width: 6.5rem;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 50%;
+    z-index: 2000;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+    text-align: center; }
+  .navigation__background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 1.25rem;
+    right: 1.25rem;
+    background-image: radial-gradient(#777, #777);
+    z-index: 1000;
+    transition: transform .2s; }
+  .navigation__nav {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    opacity: 0;
+    transition: all .2s; }
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none; }
+  .navigation__item {
+    display: block !important; }
+  .navigation__link {
+    font-size: 3rem; }
+  .navigation__checkbox:checked ~ .navigation__background {
+    transform: scale(50); }
+  .navigation__checkbox:checked ~ .navigation__nav {
+    width: 100%;
+    opacity: 1; }
+  .navigation__checkbox:checked ~ .navigation__nav .navigation__list {
+    display: block; }
+  .navigation__icon {
+    position: relative;
+    margin-top: 3rem; }
+    .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+      width: 3rem;
+      height: 2px;
+      background-color: #777;
+      display: inline-block; }
+    .navigation__icon::before, .navigation__icon::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s; }
+    .navigation__icon::before {
+      top: -.8rem; }
+    .navigation__icon::after {
+      top: .8rem; }
+  .navigation__button:hover .navigation__icon::before {
+    top: -1rem; }
+  .navigation__button:hover .navigation__icon::after {
+    top: 1rem; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon {
+    background-color: transparent; }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::before {
+    top: 0;
+    transform: rotate(135deg); }
+  .navigation__checkbox:checked + .navigation__button .navigation__icon::after {
+    top: 0;
+    transform: rotate(-135deg); } }
 
 .header {
   height: 100vh;
@@ -212,122 +346,230 @@ body {
       margin-right: 6rem; }
   .row .col-1-2 {
     width: calc((100% - 6rem)/2); }
+    @media (max-width: 37.5em) {
+      .row .col-1-2 {
+        width: 100%; } }
+    @media (max-width: 56.25em) {
+      .row .col-1-2 {
+        width: 100%; } }
   .row .col-1-3 {
     width: calc((100% - 2 * 6rem)/3); }
+    @media (max-width: 37.5em) {
+      .row .col-1-3 {
+        width: 100%; } }
   .row .col-1-4 {
     width: calc((100% - 3 * 6rem)/4); }
 
 .section {
+  position: relative;
   height: 100vh;
-  padding-top: 10rem;
-  position: relative; }
-  .section-about-us .about-us-content {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: calc(0rem - (10rem + 5rem)); }
-  .section-rates .rates-content {
+  width: 100vw;
+  padding-top: 7rem; }
+  @media (max-width: 37.5em) {
+    .section {
+      padding-top: 2rem; } }
+
+.about-us-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(-45%); }
+  @media (max-width: 56.25em) {
+    .about-us-content {
+      padding: 0 3rem; } }
+  @media (max-width: 37.5em) {
+    .about-us-content {
+      transform: translateY(-50%); } }
+
+.rates-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  transform: translateY(calc(-50% + 5rem)); }
+  @media (max-width: 56.25em) {
+    .rates-content {
+      padding: 0 3rem; } }
+
+.swimming-entrance-box,
+.table-rate-box {
+  text-align: center; }
+
+.swimming-entrance__img,
+.table-rate__img {
+  height: 15rem; }
+  @media (max-width: 85.375em) {
+    .swimming-entrance__img,
+    .table-rate__img {
+      height: 10rem; } }
+
+.swimming-entrance__price,
+.table-rate__price {
+  display: block;
+  font-size: 5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .25rem; }
+  @media (max-width: 85.375em) {
+    .swimming-entrance__price,
+    .table-rate__price {
+      font-size: 3rem; } }
+
+.swimming-entrance__currency,
+.table-rate__currency {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: none;
+  letter-spacing: normal; }
+  @media (max-width: 85.375em) {
+    .swimming-entrance__currency,
+    .table-rate__currency {
+      font-size: 2.25rem; } }
+
+.swimming-entrance__category,
+.table-rate__category {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold; }
+  @media (max-width: 85.375em) {
+    .swimming-entrance__category,
+    .table-rate__category {
+      font-size: 1.75rem; } }
+
+.table-rate__description {
+  font-size: 2rem;
+  font-style: italic; }
+  @media (max-width: 85.375em) {
+    .table-rate__description {
+      font-size: 1.75rem; } }
+
+.pools-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+  @media (max-width: 37.5em) {
+    .pools-content {
+      margin-top: 5rem; } }
+  .pools-content-wrapper {
+    position: relative;
     width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(calc(-50% + (5rem))); }
-  .section-rates .swimming-entrance-box,
-  .section-rates .table-rate-box {
-    text-align: center; }
-  .section-rates .swimming-entrance__img,
-  .section-rates .table-rate__img {
-    height: 15rem; }
-  .section-rates .swimming-entrance__price,
-  .section-rates .table-rate__price {
+    background-color: rgba(0, 0, 0, 0.1); }
+    .pools-content-wrapper::after {
+      content: "";
+      display: table;
+      clear: both; }
+    @media (max-width: 37.5em) {
+      .pools-content-wrapper {
+        background: none; }
+        .pools-content-wrapper:hover .pool-image:not(:hover) {
+          opacity: .5; } }
+  .pools-content .pool-image {
+    float: left;
+    width: calc((100%/3));
+    height: 48rem;
+    background-size: cover;
+    background-position: center;
+    transition: all .2s; }
+    @media (max-width: 85.375em) {
+      .pools-content .pool-image {
+        height: 35rem; } }
+    @media (max-width: 37.5em) {
+      .pools-content .pool-image {
+        margin: 0 2.5rem;
+        display: block;
+        width: calc(100% - (2.5rem)*2);
+        height: 28rem; }
+        .pools-content .pool-image:last-child {
+          margin-bottom: 0; } }
+    .pools-content .pool-image:hover {
+      transform: scale(1.15);
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
+      z-index: 1; }
+      @media (max-width: 37.5em) {
+        .pools-content .pool-image:hover {
+          transform: scale(1); } }
+    .pools-content .pool-image:first-child:hover {
+      transform: translateX(10rem) scale(1.15); }
+      @media (max-width: 85.375em) {
+        .pools-content .pool-image:first-child:hover {
+          transform: translateX(5rem) scale(1.15); } }
+      @media (max-width: 37.5em) {
+        .pools-content .pool-image:first-child:hover {
+          transform: scale(1); } }
+    .pools-content .pool-image:last-child:hover {
+      transform: translateX(-10rem) scale(1.15); }
+      @media (max-width: 85.375em) {
+        .pools-content .pool-image:last-child:hover {
+          transform: translateX(-5rem) scale(1.15); } }
+      @media (max-width: 37.5em) {
+        .pools-content .pool-image:last-child:hover {
+          transform: scale(1); } }
+    .pools-content .pool-image-1 {
+      background-image: url(../img/pool-1.jpg); }
+    .pools-content .pool-image-2 {
+      background-image: url(../img/pool-2.jpg); }
+    .pools-content .pool-image-3 {
+      background-image: url(../img/pool-3.jpg); }
+
+.rooms-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%); }
+  @media (max-width: 56.25em) {
+    .rooms-content {
+      padding: 0 3rem; } }
+
+.room-rate-row::after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.room-rate {
+  border: solid 2px #777;
+  float: left;
+  padding: 1rem 0rem;
+  margin-right: 1rem;
+  width: calc(50% - .5rem);
+  text-align: center; }
+  .room-rate-wrapper {
+    display: inline-block; }
+  .room-rate:last-child {
+    margin-right: 0; }
+  .room-rate--primary {
+    color: #00A8FF;
+    border-color: #00A8FF; }
+  .room-rate__amount {
     display: block;
-    font-size: 5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: .25rem; }
-  .section-rates .swimming-entrance__currency,
-  .section-rates .table-rate__currency {
     font-size: 3rem;
     font-weight: bold;
-    text-transform: none;
-    letter-spacing: normal; }
-  .section-rates .swimming-entrance__category,
-  .section-rates .table-rate__category {
+    text-align: left; }
+  .room-rate__description1 {
     display: block;
-    font-size: 2rem;
-    font-weight: bold; }
-  .section-rates .table-rate__description {
-    font-size: 2rem;
-    font-style: italic; }
-  .section-pools .pools-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 100%;
-    margin-top: calc(0rem - (10rem + 5rem)); }
-    .section-pools .pools-content-wrapper {
-      width: 100%;
-      background-color: rgba(0, 0, 0, 0.1); }
-    .section-pools .pools-content .pool-image {
-      float: left;
-      width: calc((100%/3));
-      height: 48rem;
-      background-size: cover;
-      transition: all .2s; }
-      .section-pools .pools-content .pool-image:hover {
-        transform: scale(1.15);
-        box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.5);
-        z-index: 1; }
-      .section-pools .pools-content .pool-image:first-child:hover {
-        transform: translateX(10rem) scale(1.15); }
-      .section-pools .pools-content .pool-image:last-child:hover {
-        transform: translateX(-10rem) scale(1.15); }
-      .section-pools .pools-content .pool-image-1 {
-        background-image: url(../img/pool-1.jpg); }
-      .section-pools .pools-content .pool-image-2 {
-        background-image: url(../img/pool-2.jpg); }
-      .section-pools .pools-content .pool-image-3 {
-        background-image: url(../img/pool-3.jpg); }
-  .section-rooms .rooms-content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%); }
-  .section-rooms .room-rate {
-    border: solid 2px #777;
-    display: inline-block;
-    padding: 1rem 2rem;
-    margin-right: 2rem; }
-    .section-rooms .room-rate:last-child {
-      margin-right: 0; }
-    .section-rooms .room-rate--primary {
-      color: #00A8FF;
-      border-color: #00A8FF; }
-    .section-rooms .room-rate__amount {
-      display: block;
-      font-size: 3rem;
-      font-weight: bold; }
-    .section-rooms .room-rate__description1 {
-      display: block;
-      font-size: 1.5rem; }
-    .section-rooms .room-rate__description2 {
-      display: block;
-      font-size: 1.5rem;
-      font-style: italic; }
-    .section-rooms .room-rate__inclusions ul li {
-      list-style: none;
-      font-size: 1.5rem;
-      margin-bottom: .75rem; }
-      .section-rooms .room-rate__inclusions ul li:last-child {
-        margin-bottom: 0; }
-    .section-rooms .room-rate__limits ul li {
-      font-size: 1.25rem;
-      font-style: italic;
-      margin-left: 1.75rem;
-      margin-bottom: .15rem; }
-      .section-rooms .room-rate__limits ul li:last-child {
-        margin-bottom: 0; }
-  .section-contact-us {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/map.png);
-    background-position: top;
-    background-size: cover; }
+    font-size: 1.5rem;
+    text-align: left; }
+  .room-rate__description2 {
+    display: block;
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: left; }
+  .room-rate__inclusions ul li {
+    list-style: none;
+    font-size: 1.5rem;
+    margin-bottom: .75rem; }
+    .room-rate__inclusions ul li:last-child {
+      margin-bottom: 0; }
+  .room-rate__limits ul li {
+    font-size: 1.25rem;
+    font-style: italic;
+    margin-left: 1.75rem;
+    margin-bottom: .15rem; }
+    .room-rate__limits ul li:last-child {
+      margin-bottom: 0; }
+
+.section-contact-us {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/map.png);
+  background-position: top;
+  background-size: cover; }

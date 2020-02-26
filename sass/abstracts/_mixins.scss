@@ -20,6 +20,11 @@
     transform: translateY(-50%);
 }
 
+@mixin unsetCenter {
+    position: unset;
+    transform: unset;
+}
+
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content };

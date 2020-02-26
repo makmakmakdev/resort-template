@@ -20,7 +20,8 @@ html {
       font-size: 45%; } }
   @media (max-width: 37.5em) {
     html {
-      font-size: 45%; } }
+      font-size: 45%;
+      overflow: scroll; } }
 
 body {
   box-sizing: border-box;
@@ -330,6 +331,10 @@ body {
   bottom: 0;
   color: white;
   font-size: 2rem; }
+  @media (max-width: 37.5em) {
+    .footer {
+      position: unset;
+      background-color: #3e3e3e; } }
 
 .row {
   max-width: 114rem;
@@ -367,7 +372,9 @@ body {
   padding-top: 7rem; }
   @media (max-width: 37.5em) {
     .section {
-      padding-top: 2rem; } }
+      padding-top: 2.5rem;
+      padding-bottom: 10rem;
+      height: auto; } }
 
 .about-us-content {
   position: absolute;
@@ -380,7 +387,8 @@ body {
       padding: 0 3rem; } }
   @media (max-width: 37.5em) {
     .about-us-content {
-      transform: translateY(-50%); } }
+      position: unset;
+      transform: unset; } }
 
 .rates-content {
   position: absolute;
@@ -391,6 +399,10 @@ body {
   @media (max-width: 56.25em) {
     .rates-content {
       padding: 0 3rem; } }
+  @media (max-width: 37.5em) {
+    .rates-content {
+      position: unset;
+      transform: unset; } }
 
 .swimming-entrance-box,
 .table-rate-box {
@@ -451,7 +463,8 @@ body {
   transform: translateY(-50%); }
   @media (max-width: 37.5em) {
     .pools-content {
-      margin-top: 5rem; } }
+      position: unset;
+      transform: unset; } }
   .pools-content-wrapper {
     position: relative;
     width: 100%;
@@ -521,6 +534,10 @@ body {
   @media (max-width: 56.25em) {
     .rooms-content {
       padding: 0 3rem; } }
+  @media (max-width: 37.5em) {
+    .rooms-content {
+      position: unset;
+      transform: unset; } }
 
 .room-rate-row::after {
   content: "";
@@ -572,4 +589,5 @@ body {
 .section-contact-us {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(../img/map.png);
   background-position: top;
-  background-size: cover; }
+  background-size: cover;
+  height: 100vh; }

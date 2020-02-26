@@ -25,6 +25,7 @@ html {
 
     @include respond(phone) {
         font-size: 45%;
+        overflow: scroll;
     }
 
     @include respond(big-desktop) {

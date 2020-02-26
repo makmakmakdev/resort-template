@@ -4,6 +4,10 @@
     @include respond(tab-port) {
         padding: 0 3rem;
     }
+
+    @include respond(phone) {
+        @include unsetCenter;
+    }
 }
 
 .room-rate-row {

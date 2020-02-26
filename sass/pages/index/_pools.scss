@@ -2,7 +2,7 @@
     @include centerVertical;
 
     @include respond(phone) {
-        margin-top: 5rem;
+        @include unsetCenter;
     }
 
     &-wrapper {

@@ -8,6 +8,6 @@
     }
 
     @include respond(phone){
-        transform: translateY(-50%);
+        @include unsetCenter;
     }
 }

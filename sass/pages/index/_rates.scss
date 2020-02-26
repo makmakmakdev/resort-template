@@ -7,8 +7,7 @@
     }
 
     @include respond(phone) {
-        // overflow-y: scroll;
-        // height: 100vh;        
+        @include unsetCenter;
     }
 }
 
